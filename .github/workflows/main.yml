@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  # This workflow contains a single job called "build"
+
   openBacillus:
     runs-on: ubuntu-latest
     steps: 
@@ -17,5 +17,18 @@ jobs:
         inputDir: openBacillus
     - uses: actions/upload-artifact@v2
       with:
-        name: annotated-sequences
+        name: openBacillus
+        path: output/
+        
+  openYeast:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v2
+    - name: Annotate problematic sequences
+      uses: Open-Science-Global/annotator@v0.6.1
+      with:
+        inputDir: openYeast
+    - uses: actions/upload-artifact@v2
+      with:
+        name: openYeast
         path: output/
