@@ -7,11 +7,12 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
-  annotation-openBacillus:
+  openBacillus:
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@v2
-    - uses: Open-Science-Global/annotator@v0.6.1
+    - name: Annotate problematic sequences
+      uses: Open-Science-Global/annotator@v0.6.1
       with:
         input: openBacillus
     - uses: actions/upload-artifact@v2
