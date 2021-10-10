@@ -14,7 +14,7 @@ jobs:
     - name: Annotate problematic sequences
       uses: Open-Science-Global/annotator@v0.6.1
       with:
-        input: openBacillus
+        inputDir: openBacillus
     - uses: actions/upload-artifact@v2
       with:
         name: annotated-sequences
