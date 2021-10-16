@@ -15,6 +15,16 @@ jobs:
       uses: Open-Science-Global/annotator@v0.6.1
       with:
         inputDir: openBacillus
+    - name: synthesizable
+      uses: Open-Science-Global/synthesizable@v0.0.5
+      with:
+        username: friendzymes 
+        # Password from and IDT account
+        password: Open3000
+        # ClientId from an IDT account
+        clientId: friendzymes001
+        # Client Secret from and IDT account
+        clientSecret: 66d054be-f056-4a62-846a-e4b1f84baba7
     - uses: actions/upload-artifact@v2
       with:
         name: openBacillus
