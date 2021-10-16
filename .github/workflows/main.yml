@@ -18,6 +18,7 @@ jobs:
     - name: synthesizable
       uses: Open-Science-Global/synthesizable@v0.0.5
       with:
+        inputDir: openBacillus
         username: friendzymes 
         # Password from and IDT account
         password: Open3000
